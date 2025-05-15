@@ -1,10 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root {
+            --primary-color: #4b2e2e;
+            --accent-color: #f5deb3;
+            --background-color: #fefefe;
+            --text-color: #222;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            display: block;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s;
+            width: 0%;
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        main {
+            padding: 40px 20px;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        main h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        main p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .skills-section {
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .skills-section h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 10px;
+        }
+
+        .skill {
+            background-color: #fff8f0;
+            padding: 10px 15px;
+            border-left: 4px solid var(--primary-color);
+            border-radius: 6px;
+            font-weight: 500;
+        }
+    </style>
 </head>
 <body>
-$END$
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+    </header>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/projects/">Projects</a>
+        <a href="/contact/">Contact</a>
+    </nav>
+
+    <main>
+        <p>Hi there! I'm a passionate developer who builds clean, functional, and elegant web and mobile applications. Browse my projects and feel free to get in touch!</p>
+
+        <div class="skills-section">
+            <h2>What I'm Good At</h2>
+            <div class="skills-grid">
+                <div class="skill">HTML5 / CSS / Bootstrap</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">Python</div>
+                <div class="skill">Django</div>
+                <div class="skill">PHP</div>
+                <div class="skill">MySQL</div>
+                <div class="skill">Kotlin</div>
+                <div class="skill">Android Studio</div>
+                <div class="skill">Jetpack Compose</div>
+                <div class="skill">APIs & Web Services</div>
+                <div class="skill">GitHub & Version Control</div>
+                <div class="skill">Android SDK / GPS / Maps</div>
+                <div class="skill">Mobile Web Development</div>
+                <div class="skill">App Publishing</div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

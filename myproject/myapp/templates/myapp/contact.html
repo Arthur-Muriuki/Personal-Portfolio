@@ -1,10 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Contact Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root {
+            --primary-color: #4b2e2e;
+            --accent-color: #f5deb3;
+            --background-color: #fefefe;
+            --text-color: #222;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            display: block;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s;
+            width: 0%;
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        main {
+            padding: 40px 20px;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        main h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        main p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #3c2323;
+        }
+    </style>
 </head>
 <body>
-$END$
+    <header>
+        <h1>Contact Me</h1>
+    </header>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/projects/">Projects</a>
+        <a href="/contact/">Contact</a>
+    </nav>
+
+    <main>
+        <p>If you'd like to reach out, feel free to email me anytime:</p>
+        <p><strong>Email:</strong> yourname@example.com</p>
+        <a href="/" class="btn">Back to Home</a>
+    </main>
 </body>
 </html>
